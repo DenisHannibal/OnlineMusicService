@@ -1,9 +1,10 @@
 <?php 
  class Account {
-
+  private $con;
   private $errorArray;
- 
-  public function __construct() {  
+  
+  public function __construct($con) {  
+     $this->con = $con; 
     $this->errorArray = array();
   }
    
@@ -16,9 +17,10 @@
    $this->validatePasswords($pw, $pw2); 
 
    if (empty($this->errorArray) == true) {
-     return true;
+
+     return  $this->insertUserDetails($un,$fn,$ln,$em,$pw);   
    }
-   else {
+   else { 
      return false; 
    }
   }
@@ -28,11 +30,28 @@
     }
     return "<span class='errorMessage'>$error</span>";   
   }
+  // ДОБАВИТЬ ПОЛ И КАРТИНКИ БЛЯТЬ!
+  // ДОБАВИТЬ ПОЛ И КАРТИНКИ БЛЯТЬ!
+  // ДОБАВИТЬ ПОЛ И КАРТИНКИ БЛЯТЬ!
+  private function insertUserDetails($un,$fn,$ln,$em,$pw) {  
+    $encryptedPw = md5($pw);
+    $profilePic = "assets/images/profile-pics/if_profle_1055000.svg"; 
+    $date = date("Y-m-d"); 
+    $result = mysqli_query($this->con,"INSERT INTO users VALUES ('','$un','$fn','$ln','$em','$encryptedPw','$date','$profilePic')"); 
+  return $result; 
+  }
+ 
   private function validateUsername($un){
 
     if(strlen($un)> 25 || strlen($un)<5) {
       array_push($this->errorArray,Constants::$usernameCharacters); 
       return;
+    }
+
+    $checkUsernameQuery = mysqli_query($this->con,"SELECT username FROM users WHERE username='$un'");
+    if(mysqli_num_rows($checkUsernameQuery) != 0) {
+      array_push($this->errorArray, Constants::$usernameTaken);
+      return; 
     }
   }
   private function validateFirstName($fn){
@@ -57,6 +76,11 @@
     if(!filter_var($em, FILTER_VALIDATE_EMAIL)) {
       array_push($this->errorArray,Constants::$emailInvalids);   
       return;
+    }
+    $checkUsernameQuery = mysqli_query($this->con,"SELECT email FROM users WHERE email='$em'");
+    if(mysqli_num_rows($checkUsernameQuery) != 0) {
+      array_push($this->errorArray, Constants::$emailTaken);
+      return; 
     }
   }
   private function validatePasswords($pw, $pw2){ 
