@@ -12,4 +12,4 @@
     public static $emailTaken = "This email is already in use"; 
     public static $loginFailed = "You username or password was incorrect";   
   }
-?>
+?> 
