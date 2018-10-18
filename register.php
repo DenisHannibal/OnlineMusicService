@@ -25,6 +25,7 @@
   <title>Register</title>  
 </head>
 <body>
+   <canvas id="pixie"></canvas>
 <?php 
 if(isset($_POST['registerButton'])) {
   echo '<script>
@@ -48,13 +49,13 @@ else {
   <div id="loginContainer">
     <div id="inputContainer"> 
       <form id="loginForm" action="register.php" method="POST">
-        <h2>Login to your account</h2>
+        <h2>Login to your account!</h2>
         <p>   
-          <label for="loginUsername">Username</label>
+          <label for="loginUsername">Username:</label>
           <input id="loginUsername" name="loginUsername" type="text" value="<?php getInputValue('loginUsername') ?>" placeholder="Denis" required> 
         </p>  
         <p> 
-          <label for="loginPassword">Password</label>
+          <label for="loginPassword">Password:</label>
           <input id="loginPassword" name="loginPassword" type="password" placeholder="Your password" required> 
         </p>
           <?php echo $account->getError(Constants::$loginFailed); ?>
@@ -64,40 +65,40 @@ else {
           </div>
       </form>
       <form id="registerForm" action="register.php" method="POST">
-        <h2>Create your free account</h2> 
+        <h2>Create your free account!</h2> 
         <p> 
-          <label for="username">Username</label>
+          <label for="username">Username:</label>
           <input id="username"  name="username" type="text" placeholder="Denis" value="<?php getInputValue('username') ?>" required>
         </p> 
         <?php echo $account->getError(Constants::$usernameCharacters); ?>
         <?php echo $account->getError(Constants::$usernameTaken); ?> 
         <p>         
-          <label for="firstName">First name</label>
+          <label for="firstName">First name:</label>
           <input id="firstName" name="firstName" type="text" value="<?php getInputValue('firstName') ?>" placeholder="Hannibal" required>
         </p> 
         <?php echo $account->getError(Constants::$firstNameCharacters); ?>
         <p>
-          <label for="lastName">Last name</label> 
+          <label for="lastName">Last name:</label> 
           <input id="lastName" name="lastName" type="text" value="<?php getInputValue('lastName') ?>" placeholder="GitHub" required>
         </p> 
         <?php echo $account->getError(Constants::$lastNameCharacters); ?> 
         <p>   
-          <label for="email">Email</label>
+          <label for="email">Email:</label>
           <input id="email" name="email" type="email" value="<?php getInputValue('email') ?>" placeholder="denis@gmail.com" required>
         </p> 
         <p> 
-          <label for="email2">Confirm email</label>
+          <label for="email2">Confirm email:</label>
           <input id="email2" name="email2" type="email" value="<?php getInputValue('email2') ?>" placeholder="denis@gmail.com" required> 
         </p> 
         <?php echo $account->getError(Constants::$emailsDoNoMatch); ?>
         <?php echo $account->getError(Constants::$emailInvalid); ?>  
         <?php echo $account->getError( Constants::$emailTaken); ?> 
         <p>     
-          <label for="password">Password</label>
+          <label for="password">Password:</label>
           <input id="password" name="password" type="password" placeholder="Your password" required> 
         </p> 
         <p> 
-         <label for="password2">Confirm password</label> 
+         <label for="password2">Confirm password:</label> 
          <input id="password2" name="password2" type="password" placeholder="Your password"  required> 
         </p>
         <?php echo $account->getError(Constants::$passwordsDoNoMatch); ?>
@@ -117,9 +118,9 @@ else {
         <li>Create your own playlists</li>
         <li>Follow artists to keep up to date</li> 
       </ul>
-    </div>
+    </div>  
   </div>
 </main>
-   
+   <script src="assets/js/parallaxsoon3.js" type="text/javascript"></script>
 </body>
 </html>
