@@ -115,12 +115,11 @@ body:after {
 }
 
 #inputContainer .errorMessage {
-  color: hsl(330, 100%, 50%);
+  color: #b62a6b;   
   font-size: 2vw; 
-  display: block;
-  text-shadow: 0 2px 0 0px hsl(330, 100%, 25%),
-    0 3px 2px 0px hsla(330, 100%, 15%, 0.5);
-}
+  display: block; 
+  font-weight: bold; 
+}  
 
 #inputContainer .errorMessage:hover {
   font-size: 3.5vw;  

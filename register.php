@@ -19,7 +19,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
   <link rel="stylesheet" type="text/css" href="assets/css/register/register.css">       
-  <link rel="stylesheet" type="text/css" href="assets/css/register/placeholder.css">     
+  <link rel="stylesheet" type="text/css" href="assets/css/register/placeholder.css"> 
+  <link rel="stylesheet" type="text/css" href="assets/css/register/media.css">      
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
   <script src="assets/js/register.js"></script>  
   <title>Register</title>  
@@ -111,7 +112,7 @@ else {
       </form>
     </div>   
     <div id="loginText">
-      <h1>Get great music,right now</h1>
+      <h1>Get great music, right now</h1>
       <h2>Listen to loads of songs for free</h2>
       <ul>
         <li>Discover music you'll fall in love with</li>

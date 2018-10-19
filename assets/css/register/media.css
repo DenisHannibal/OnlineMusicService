@@ -1,0 +1,78 @@
+@media (max-width: 1140px) {
+  
+}
+
+@media (max-width: 960px) {
+ 
+}
+
+@media (max-width: 540px) { 
+ 
+}
+
+@media (max-width: 720px) {
+
+  #loginContainer {
+    flex-direction: column-reverse;
+    display: flex;
+  }
+  #inputContainer {
+    border: none;
+    width: 100%;
+    padding: 0 5vw 5vh 0;   
+  }
+  #inputContainer h2 {
+    font-size: 8vw;   
+  }
+  #inputContainer input[type="text"],
+  #inputContainer input[type="password"],
+  #inputContainer input[type="email"] {
+    border-bottom: 2px solid #fff; 
+    height: 7vh; 
+    line-height: 7vh;
+    font-size: 7vw;   
+  }
+  #inputContainer label {
+    color: #a0a0a0;
+    font-size: 6vw; 
+    margin-top: 15px;
+  }
+
+  #inputContainer button {
+    border: 3px solid #fff; 
+    font-size: 5vw;  
+    height: 7vh;
+    width: 40vw; 
+
+  }
+
+  #inputContainer button:hover {
+    border: 3.5px solid rgb(196, 188, 188);
+    height: 7.5vh;
+    font-size: 5.2vw;
+  }
+  .hasAccountText span {
+    font-size: 5vw; 
+  }
+
+  .hasAccountText span:hover {
+    font-size: 4.2vw;
+  }
+ 
+  #inputContainer .errorMessage {
+    font-size: 6vw;
+    color: #07d159; 
+    font-weight: bold;  
+  }
+
+  #loginText h1 {
+    font-size: 10vw;         
+  }
+
+  #loginText h2 {
+    font-size: 6vw;
+  } 
+
+  #loginText li {
+    font-size: 4vw;  }
+}
