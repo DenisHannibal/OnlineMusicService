@@ -18,16 +18,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/register/register.css">       
+  <link rel="stylesheet" type="text/css" href="assets/css/register/register.css">
   <link rel="stylesheet" type="text/css" href="assets/css/register/placeholder.css"> 
-  <link rel="stylesheet" type="text/css" href="assets/css/register/media.css">    
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">   
+  <link rel="stylesheet" type="text/css" href="assets/css/register/media.css">       
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
   <script src="assets/js/register.js"></script>  
   <title>Register</title>  
 </head>
 <body>
-   <canvas id="pixie"></canvas>
+   
 <?php 
 if(isset($_POST['registerButton'])) {
   echo '<script>
@@ -46,8 +45,9 @@ else {
   </script>'; 
 }
 ?>
-
+<canvas id="pixie"></canvas>  
 <main class="main">
+
   <div id="loginContainer">
     <div id="inputContainer"> 
       <form id="loginForm" action="register.php" method="POST">
@@ -113,19 +113,16 @@ else {
       </form>
     </div>   
     <div id="loginText">
-      <h1>Get great music, right now</h1>
-      <h2>Listen to loads of songs for free</h2>
+      <h1>Get great music, right now!</h1>     
+      <h2>Listen to loads of songs for free:</h2>
       <ul>
-        <li>Discover music you'll fall in love with</li>
-        <li>Create your own playlists</li>
-        <li>Follow artists to keep up to date</li> 
+        <li>-Discover music you'll fall in love with;</li>
+        <li>-Create your own playlists;</li>
+        <li>-Follow artists to keep up to date.</li>   
       </ul>
     </div>  
   </div>
 </main> 
-<footer> 
-    <h2 class="text-right">GitHub - DenisHannibal </h2> 
-</footer>
    <script src="assets/js/parallaxsoon3.js" type="text/javascript"></script>
 </body>
 </html>

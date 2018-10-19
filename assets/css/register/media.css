@@ -1,17 +1,5 @@
-@media (max-width: 1140px) {
-  
-}
-
-@media (max-width: 960px) {
- 
-}
-
-@media (max-width: 540px) { 
- 
-}
-
 @media (max-width: 720px) {
-
+ 
   #loginContainer {
     flex-direction: column-reverse;
     display: flex;
@@ -52,11 +40,12 @@
     font-size: 5.2vw;
   }
   .hasAccountText span {
-    font-size: 5vw; 
+    font-size: 5vw;  
   }
 
   .hasAccountText span:hover {
-    font-size: 4.2vw;
+    font-size: 6vw;     
+    transition: 2s;         
   }
  
   #inputContainer .errorMessage {
