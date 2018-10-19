@@ -151,3 +151,23 @@ body:after {
   padding: 5px 30px;
   background: url(../../image/icons/icons8_Checkmark_25px.png) no-repeat 0 0;
 }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+  padding: 2vw;
+}
+
+footer {
+  flex: 0 0 auto;
+  position: relative; 
+  z-index: 2; 
+} 
