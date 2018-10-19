@@ -1,3 +1,4 @@
+
 @media (max-width: 720px) {
  
   #loginContainer {
@@ -33,7 +34,7 @@
     width: 40vw; 
 
   }
-
+  
   #inputContainer button:hover {
     border: 3.5px solid rgb(196, 188, 188);
     height: 7.5vh;
@@ -50,8 +51,9 @@
  
   #inputContainer .errorMessage {
     font-size: 6vw;
-    color: #07d159; 
-    font-weight: bold;  
+    color: #fff;  
+    font-weight: bold;    
+  text-shadow: 0 0 10px #FF1177; 
   }
 
   #loginText h1 {
@@ -59,9 +61,9 @@
   }
 
   #loginText h2 {
-    font-size: 6vw;
+    font-size: 8vw;
   } 
 
   #loginText li {
-    font-size: 4vw;  }
+    font-size: 6vw;  } 
 }
