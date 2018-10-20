@@ -25,29 +25,27 @@
   <script src="assets/js/register.js"></script>  
   <title>Register</title>  
 </head>
-<body>
-   
+<body>  
 <?php 
-if(isset($_POST['registerButton'])) {
-  echo '<script>
-    $(document).ready(function () {
-     $("#loginForm").hide();
-     $("#registerForm").show(); 
-    });
-  </script>'; 
-}
-else {
-  echo '<script>
-    $(document).ready(function () {
-     $("#loginForm").show();
-     $("#registerForm").hide(); 
-    });
-  </script>'; 
-}
+ if(isset($_POST['registerButton'])) {
+   echo '<script>
+     $(document).ready(function () {
+      $("#loginForm").hide();
+      $("#registerForm").show(); 
+     });
+   </script>'; 
+ }
+ else {
+   echo '<script>
+     $(document).ready(function () {
+      $("#loginForm").show();
+      $("#registerForm").hide(); 
+     });
+   </script>'; 
+ }
 ?>
 <canvas id="pixie"></canvas>  
 <main class="main">
-
   <div id="loginContainer">
     <div id="inputContainer"> 
       <form id="loginForm" action="register.php" method="POST">
@@ -120,9 +118,9 @@ else {
         <li>-Create your own playlists;</li>
         <li>-Follow artists to keep up to date.</li>   
       </ul>
-    </div>  
+    </div>   
   </div>
 </main> 
-   <script src="assets/js/parallaxsoon3.js" type="text/javascript"></script>
+<script src="assets/js/parallaxsoon3.js" type="text/javascript"></script>
 </body>
 </html>
