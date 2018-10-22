@@ -1,4 +1,4 @@
-<footer class="footer"> 
+
     <div id="nowPlayingBarContainer">
      <div id="nowPlayingBar">
         <div id="nowPlayingLeft">
@@ -63,4 +63,3 @@
         </div>
      </div>
     </div>
-   </footer>

@@ -1,21 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
-  <link rel="stylesheet" type="text/css" href="assets/css/normalize.css"> 
-  <link rel="stylesheet" type="text/css" href="assets/css/index/index.css"> 
-  <link rel="stylesheet" type="text/css" href="assets/css/index/musicPlayer.css">  
-  <title>Hello</title> 
-</head>
-<body>
-  <div id="mainConteiner">
-    <?php 
-    include("includes/mainIndex.php") ;  
-    include("includes/footerIndex.php") ;  
-    ?>
+<?php  include("includes/header.php"); ?> 
+
+
+<h1 class="pageHeadingBig">You Might Also Like</h1>
+
+<div class="gridViewContainer">
+
+<?php 
+ $albumQuery = mysqli_query($con, "SELECT * FROM albums ORDER BY RAND() LIMIT 10");
+  while($row = mysqli_fetch_array($albumQuery)) {  
    
-  </div>
-</body>
-</html>
+    echo "<div class='gridViewItem'>
+    <a href='album.php?id=" . $row['id'] . "'>
+      <img src='" .  $row['artworkPath'] . "'>
+      <center>
+      <div class='gridViewInfo'>"
+      .  $row['title'] . 
+      "</div>
+      </center> 
+      </a>
+    </div>" ;
+  }
+?>
+</div> 
+
+<?php  include("includes/footer.php"); ?> 
+
+ 
+ 
+
+
