@@ -20,22 +20,22 @@
          <div class="content playerControls">
            <div class="buttons"> 
              <button class="controlButton shuffle" title="Shuffle"> 
-               <img src="assets/image/player/icons8_Shuffle_25px.png" alt="Shuffle">
+               <img src="assets/image/player/shuffle.png" alt="Shuffle">
              </button>  
              <button class="controlButton previous" title=" Previous"> 
-               <img src="assets/image/player/icons8_Skip_to_Start_25px.png" alt=" Previous">
+               <img src="assets/image/player/previous.png" alt=" Previous">
              </button>   
              <button class="controlButton play" title="Play"> 
-               <img src="assets/image/player/icons8_Play_Button_Circled_32px.png" alt="Play">
+               <img src="assets/image/player/play.png" alt="Play">
              </button>   
              <button class="controlButton pause" title="Pause">  
-               <img src="assets/image/player/icons8_Pause_Button_32px.png" alt="Pause">   
+               <img src="assets/image/player/pause.png" alt="Pause">   
              </button>   
              <button class="controlButton next" title="Next"> 
-               <img src="assets/image/player/icons8_End_25px.png" alt="Next">
+               <img src="assets/image/player/next.png" alt="Next">
              </button>  
              <button class="controlButton repeat" title="Repeat"> 
-               <img src="assets/image/player/icons8_Repeat_25px.png" alt="Repeat"> 
+               <img src="assets/image/player/repeat.png" alt="Repeat"> 
              </button>   
            </div>
            <div class="playbackBar">
@@ -52,7 +52,7 @@
         <div id="nowPlayingRight"> 
           <div class="volumeBar">
             <button class="controlButton volume" title="Volume">
-            <img src="assets/image/player/icons8_Speaker_25px.png" alt="Volume">
+            <img src="assets/image/player/volume.png" alt="Volume"> 
             </button>  
             <div class="progressBar">
                 <div class="progressBarBg">

@@ -6,7 +6,7 @@
             <div class="group">
               <div class="navItem">
                 <a href="search.php" class="navItemLink">Search
-                  <img src="assets/image/player/icons8_Search_25px.png" class="icon" alt="Search">
+                  <img src="assets/image/player/search.png" class="icon" alt="Search">
                 </a>   
               </div>  
             </div>  

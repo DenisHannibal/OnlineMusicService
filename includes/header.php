@@ -1,5 +1,8 @@
 <?php 
  include("includes/config.php"); 
+ include("includes/classes/Artist.php"); 
+ include("includes/classes/Album.php"); 
+ include("includes/classes/Song.php");  
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +14,7 @@
   <link rel="stylesheet" type="text/css" href="assets/css/normalize.css"> 
   <link rel="stylesheet" type="text/css" href="assets/css/index/navBar.css"> 
   <link rel="stylesheet" type="text/css" href="assets/css/index/mainIndex.css"> 
+  <link rel="stylesheet" type="text/css" href="assets/css/index/album.css">  
   <link rel="stylesheet" type="text/css" href="assets/css/index/musicPlayer.css">  
   <title>Hello</title>  
 </head>

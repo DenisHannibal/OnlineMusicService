@@ -41,6 +41,8 @@
 .logo {
  margin-bottom: 15px; 
 }
-.navItemLink .icon {   
+.navItemLink .icon {
+    width: 25px;
+    height: 25px;    
  padding: 0 0 0 80px;  
 }
