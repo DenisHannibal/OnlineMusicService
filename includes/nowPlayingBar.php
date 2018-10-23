@@ -1,4 +1,40 @@
 
+<?php
+
+$songQuery = mysqli_query($con,"SELECT * FROM songs ORDER BY RAND() LIMIT 10");
+$resultArray = array();
+while($row = mysqli_fetch_array($songQuery)) {
+array_push($resultArray,$row['id']); 
+}
+$jsonArray = json_encode($resultArray);
+?> 
+<script>
+$(document).ready(function() {
+ 
+currentPlaylist = <?php echo $jsonArray;?>; 
+audioElement = new Audio();
+setTrack(currentPlaylist[0],currentPlaylist,false); 
+
+});
+ 
+function setTrack(trackId,newPlaylist,play) {
+  audioElement.setTrack("assets/music/1.mp3"); 
+  if(play == true) {
+    audioElement.play();
+  }
+  
+}
+function playSong() {
+  $(".controlButton.play").hide();
+  $(".controlButton.pause").show(); 
+  audioElement.play();
+} 
+function pauseSong() {
+  $(".controlButton.play").show();
+  $(".controlButton.pause").hide(); 
+  audioElement.pause();
+}
+</script>
     <div id="nowPlayingBarContainer">
      <div id="nowPlayingBar">
         <div id="nowPlayingLeft">
@@ -25,12 +61,12 @@
              <button class="controlButton previous" title=" Previous"> 
                <img src="assets/image/player/previous.png" alt=" Previous">
              </button>   
-             <button class="controlButton play" title="Play"> 
+             <button class="controlButton play" title="Play" onclick="playSong()" > 
                <img src="assets/image/player/play.png" alt="Play">
              </button>   
-             <button class="controlButton pause" title="Pause">  
+             <button class="controlButton pause" title="Pause" onclick="pauseSong()" >  
                <img src="assets/image/player/pause.png" alt="Pause">   
-             </button>   
+             </button>    
              <button class="controlButton next" title="Next"> 
                <img src="assets/image/player/next.png" alt="Next">
              </button>  
