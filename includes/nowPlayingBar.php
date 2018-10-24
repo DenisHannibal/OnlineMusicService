@@ -11,20 +11,91 @@ $jsonArray = json_encode($resultArray);
 <script>
 $(document).ready(function() {
  
-currentPlaylist = <?php echo $jsonArray;?>; 
-audioElement = new Audio();
-setTrack(currentPlaylist[0],currentPlaylist,false); 
+  currentPlaylist = <?php echo $jsonArray;?>; 
+  audioElement = new Audio();
+  setTrack(currentPlaylist[0],currentPlaylist,false); 
 
+  updateVolumeProgressBar(audioElement.audio); 
+
+  $(".playbackBar .progressBar").mousedown(function() {
+    mouseDown = true;  
+  });
+  $(".playbackBar .progressBar").mousemove(function(e) {
+    if(mouseDown == true){
+       
+      timeFromOffset(e,this);
+    } 
+  }); 
+  $(".playbackBar .progressBar").mouseup(function(e) {
+    
+      
+      timeFromOffset(e,this);
+  });
+
+
+
+  $(".volumeBar .progressBar").mousedown(function() {
+    mouseDown = true;  
+  });
+  $(".volumeBar .progressBar").mousemove(function(e) {
+    if(mouseDown == true){
+      var percentage = e.offsetX/$(this).width();
+       if(percentage>= 0 && percentage<=1) {
+        audioElement.audio.volume = percentage;
+       }
+   
+    } 
+  }); 
+  $(".volumeBar .progressBar").mouseup(function(e) {
+    
+    var percentage = e.offsetX/$(this).width();
+       if(percentage>= 0 && percentage<=1) {
+        audioElement.audio.volume = percentage;
+       } 
+  });
+
+  $(document).mouseup(function(){
+    mouseDown = false; 
+  })
 });
  
-function setTrack(trackId,newPlaylist,play) {
-  audioElement.setTrack("assets/music/1.mp3"); 
-  if(play == true) {
-    audioElement.play();
+  function timeFromOffset(mouse, progressBar) {
+    var percentage = mouse.offsetX / $(progressBar).width() * 100;
+    var seconds = audioElement.audio.duration * (percentage /100);
+    audioElement.setTime(seconds);
   }
+
+function setTrack(trackId,newPlaylist,play) {
+  $.post("includes/handlers/ajax/getSongJson.php",  { songId: trackId},function(data){
+
+    var track = JSON.parse(data);
+    $(".trackName span").text(track.title);
+
+     $.post("includes/handlers/ajax/getArtistJson.php",  { artistId: track.artist},function(data){
+       var artist = JSON.parse(data);
+       $(".artistName span").text(artist.name);
+     });
+     $.post("includes/handlers/ajax/getAlbumJson.php",  { albumId: track.album},function(data){
+       var album = JSON.parse(data);
+       $(".albumLink img").attr("src", album.artworkPath); 
+     });
+
+    audioElement.setTrack(track);
+    if(play == true) {
+    playSong();
+  }
+
+  });
+  
   
 }
 function playSong() {
+
+  if(audioElement.audio.currentTime == 0 ) {
+
+    $.post("includes/handlers/ajax/updatePlays.php", {songId: audioElement.currentlyPlaying.id }); 
+  }
+
   $(".controlButton.play").hide();
   $(".controlButton.pause").show(); 
   audioElement.play();
@@ -40,11 +111,11 @@ function pauseSong() {
         <div id="nowPlayingLeft">
          <div class="content">
            <span class="albumLink">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtk5zRf_58M0FNX0-dSwH3UyOEBk7TJ5ZD1ww5nojzaTQECGS9" class="albumArtwork">
+            <img src="" class="albumArtwork">
            </span> 
            <div class="trackInfo">
            <span class="trackName">
-             <span>Hannibal Lector</span> 
+             <span></span> 
            </span> 
            <span class="artistName">
              <span>Denis Gribovitch</span>  
