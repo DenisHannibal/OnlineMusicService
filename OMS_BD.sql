@@ -10,16 +10,16 @@ CREATE TABLE IF NOT EXISTS `albums` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 INSERT INTO `albums` (`id`, `title`, `artist`, `genre`, `artworkPath`) VALUES
-(1, 'Kamikaze', 1, 4, 'assets/image/artwork/kamikaze.png'),
-(2, 'Revival', 1, 4, 'assets/image/artwork/revival.jpg'),
-(3, 'Meteora ', 5, 1, 'assets/image/artwork/meteora.jpg'),
-(4, 'One More Light', 5, 1, 'assets/image/artwork/onemorelight.jpg'),
-(5, 'All the Right Reasons', 9, 1, 'assets/image/artwork/alltherightreasons.jpg'),
-(6, 'Dark Horse', 9, 1, 'assets/image/artwork/darkhorse.jpg'),
-(7, 'America', 4, 1, 'assets/image/artwork/america.jpg'),
-(8, 'This Is War', 4, 1, 'assets/image/artwork/thisiswar.jpg'),
-(9, 'Nevermind', 10, 1, 'assets/image/artwork/nevermind.jpg'),
-(10, 'In Utero', 10, 1, 'assets/image/artwork/inutero.jpg');
+(1, 'Kamikaze', 1, 4, 'assets/images/artwork/kamikaze.png'), 
+(2, 'Revival', 1, 4, 'assets/images/artwork/revival.jpg'),
+(3, 'Meteora ', 5, 1, 'assets/images/artwork/meteora.jpg'),
+(4, 'One More Light', 5, 1, 'assets/images/artwork/onemorelight.jpg'),
+(5, 'All the Right Reasons', 9, 1, 'assets/images/artwork/alltherightreasons.jpg'),
+(6, 'Dark Horse', 9, 1, 'assets/images/artwork/darkhorse.jpg'),
+(7, 'America', 4, 1, 'assets/images/artwork/america.jpg'),
+(8, 'This Is War', 4, 1, 'assets/images/artwork/thisiswar.jpg'),
+(9, 'Nevermind', 10, 1, 'assets/images/artwork/nevermind.jpg'),
+(10, 'In Utero', 10, 1, 'assets/images/artwork/inutero.jpg');
 
 CREATE TABLE IF NOT EXISTS `artists` (
 `id` int(11) NOT NULL,
