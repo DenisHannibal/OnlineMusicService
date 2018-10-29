@@ -101,8 +101,6 @@ function removeFromPlaylist(button, playlistId) {
 			alert(error);
 			return;
 		}
-
-		//do something when ajax returns
 		openPage("playlist.php?id=" + playlistId);
 	});
 }
@@ -120,8 +118,6 @@ function createPlaylist() {
 				alert(error);
 				return;
 			}
-
-			//do something when ajax returns
 			openPage("yourMusic.php");
 		});
 
@@ -141,8 +137,6 @@ function deletePlaylist(playlistId) {
 				alert(error);
 				return;
 			}
-
-			//do something when ajax returns
 			openPage("yourMusic.php");
 		});
 
@@ -163,8 +157,8 @@ function showOptionsMenu(button) {
 	var menuWidth = menu.width();
 	menu.find(".songId").val(songId);
 
-	var scrollTop = $(window).scrollTop(); //Distance from top of window to top of document
-	var elementOffset = $(button).offset().top; //Distance from top of document
+	var scrollTop = $(window).scrollTop(); 
+	var elementOffset = $(button).offset().top; 
 
 	var top = elementOffset - scrollTop;
 	var left = $(button).position().left;
@@ -176,7 +170,7 @@ function showOptionsMenu(button) {
 
 function formatTime(seconds) {
 	var time = Math.round(seconds);
-	var minutes = Math.floor(time / 60); //Rounds down
+	var minutes = Math.floor(time / 60); 
 	var seconds = time - (minutes * 60);
 
 	var extraZero = (seconds < 10) ? "0" : "";
@@ -185,9 +179,7 @@ function formatTime(seconds) {
 }
 
 function updateTimeProgressBar(audio) {
-	$(".progressTime.current").text(formatTime(audio.currentTime));
-	$(".progressTime.remaining").text(formatTime(audio.duration - audio.currentTime));
-
+	$(".progressTime.current").text(formatTime(audio.currentTime)); 
 	var progress = audio.currentTime / audio.duration * 100;
 	$(".playbackBar .progress").css("width", progress + "%");
 }
