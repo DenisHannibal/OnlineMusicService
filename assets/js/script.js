@@ -107,7 +107,7 @@ function removeFromPlaylist(button, playlistId) {
 
 function createPlaylist() {
 
-	var popup = prompt("Please enter the name of your playlist");
+	var popup = prompt("Введите название плейлиста");
 
 	if(popup != null) {
 
@@ -126,7 +126,7 @@ function createPlaylist() {
 }
 
 function deletePlaylist(playlistId) {
-	var prompt = confirm("Are you sure you want to delte this playlist?");
+	var prompt = confirm("Вы уверены, что хотите удалить этот плейлист?");
 
 	if(prompt == true) {
 
@@ -203,7 +203,6 @@ function Audio() {
 	});
 
 	this.audio.addEventListener("canplay", function() {
-		//'this' refers to the object that the event was called on
 		var duration = formatTime(this.duration);
 		$(".progressTime.remaining").text(duration);
 	});
