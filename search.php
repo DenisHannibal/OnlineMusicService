@@ -11,8 +11,8 @@ else {
 
 <div class="searchContainer">
 
-	<h4>Search for an artist, album or song</h4>
-	<input type="text" class="searchInput" value="<?php echo $term; ?>" placeholder="Start typing..." onfocus="this.value = this.value">
+	<h4>Поиск исполнителя, альбома или песни:</h4>
+	<input type="text" class="searchInput" value="<?php echo $term; ?>" placeholder="Поиск..." onfocus="this.value = this.value">
 
 </div>
 
@@ -28,7 +28,7 @@ $(function() {
 		timer = setTimeout(function() {
 			var val = $(".searchInput").val();
 			openPage("search.php?term=" + val);
-		}, 2000);
+		}, 2000); 
 
 	})
 
@@ -40,14 +40,14 @@ $(function() {
 <?php if($term == "") exit(); ?>
 
 <div class="tracklistContainer borderBottom">
-	<h2>SONGS</h2>
+	<h2>ПЕСНИ</h2>
 	<ul class="tracklist">
 		
 		<?php
 		$songsQuery = mysqli_query($con, "SELECT id FROM songs WHERE title LIKE '$term%' LIMIT 10");
 
 		if(mysqli_num_rows($songsQuery) == 0) {
-			echo "<span class='noResults'>No songs found matching " . $term . "</span>";
+			echo "<span class='noResults'>Не найдено ни одной песни " . $term . "</span>";
 		}
 
 
@@ -106,13 +106,13 @@ $(function() {
 
 <div class="artistsContainer borderBottom">
 
-	<h2>ARTISTS</h2>
+	<h2>ИСПОЛНИТЕЛИ</h2>
 
 	<?php
 	$artistsQuery = mysqli_query($con, "SELECT id FROM artists WHERE name LIKE '$term%' LIMIT 10");
 	
 	if(mysqli_num_rows($artistsQuery) == 0) {
-		echo "<span class='noResults'>No artists found matching " . $term . "</span>";
+		echo "<span class='noResults'>Не найдено ни одного исполнителя " . $term . "</span>";
 	}
 
 	while($row = mysqli_fetch_array($artistsQuery)) {
@@ -139,13 +139,13 @@ $(function() {
 
 </div>
 
-<div class="gridViewContainer">
-	<h2>ALBUMS</h2>
+<div class="gridViewContainer"> 
+	<h2>АЛЬБОМЫ</h2>
 	<?php
 		$albumQuery = mysqli_query($con, "SELECT * FROM albums WHERE title LIKE '$term%' LIMIT 10");
 
 		if(mysqli_num_rows($albumQuery) == 0) {
-			echo "<span class='noResults'>Не найдено ни одного альбома" . $term . "</span>";
+			echo "<span class='noResults'>Не найдено ни одного альбома " . $term . "</span>";
 		}
 
 		while($row = mysqli_fetch_array($albumQuery)) {
@@ -167,7 +167,7 @@ $(function() {
 	?> 
 
 </div>
-
+ 
 <nav class="optionsMenu">
 	<input type="hidden" class="songId">
 	<?php echo Playlist::getPlaylistsDropdown($con, $userLoggedIn->getUsername()); ?>
