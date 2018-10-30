@@ -2,7 +2,7 @@
 include("../../config.php");
 
 if(!isset($_POST['username'])) {
-	echo "ERROR: Could not set username";
+	echo "ОШИБКА: Не удалось установить имя пользователя";
 	exit();
 }
 
@@ -12,22 +12,22 @@ if(isset($_POST['email']) && $_POST['email'] != "") {
 	$email = $_POST['email'];
 
 	if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-		echo "Email is invalid";
+		echo "Недействительный адрес электронной почты";
 		exit();
 	}
 
 	$emailCheck = mysqli_query($con, "SELECT email FROM users WHERE email='$email' AND username != '$username'");
 	if(mysqli_num_rows($emailCheck) > 0) {
-		echo "Email is already in use";
+		echo "Эл. адрец уже используется";
 		exit();
 	}
 
 	$updateQuery = mysqli_query($con, "UPDATE users SET email = '$email' WHERE username='$username'");
-	echo "Update successful";
+	echo "Обновление прошло успешно";
 
 }
 else {
-	echo "You must provide an email";
+	echo "Вы должны предоставить электронное письмо";
 }
 
 ?> 

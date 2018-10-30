@@ -18,7 +18,6 @@ body {
     background-size: 100%; 
     background-size: cover; 
     font-size: 14px;
-    min-width: 720px;
   } 
   body:after {   
     content: '';
@@ -78,9 +77,11 @@ body {
 }
 
 .entityInfo {
+    flex-direction: row;
+    flex-wrap: wrap;  
     padding: 40px 0 10px 0;
-    display: flex;
-    justify-content: center;  
+    display: flex; 
+    justify-content: right;  
 }
 
 
@@ -114,6 +115,7 @@ body {
     margin: 10px 0 10px 0;  
     padding: 15px 10px;
     list-style: none;
+    opacity: .80 ;  
 }
 
 .tracklistRow span {
@@ -123,6 +125,7 @@ body {
 
 .tracklistRow:hover {
     background-color: #282828;
+    opacity: .99 ; 
 }
 
 .tracklistRow .trackCount {
@@ -184,10 +187,8 @@ body {
     margin-bottom: 7px;
 }
 .centerSection {
-    text-align: center; 
-}
-.artistInfo {
     text-align: center;
+    width: 100%;  
 }
 
 .button {
@@ -265,7 +266,10 @@ input:focus {
     margin: 15px;
     display: block;
 }
-
+.buttonItems {
+    text-align: center;
+    width: 100%; 
+}
 .buttonItems .button {
     display: block;
     margin: 0 auto 20px auto;

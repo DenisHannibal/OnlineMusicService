@@ -22,6 +22,7 @@ else {
 <head>
 	<title>OnlineMusicService</title> 
 
+	<link rel="stylesheet" type="text/css" href="assets/css/normalize.css"> 
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/footer.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/header.css"> 

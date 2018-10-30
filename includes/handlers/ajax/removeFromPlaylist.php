@@ -8,7 +8,7 @@ if(isset($_POST['playlistId']) && isset($_POST['songId'])) {
 	$query = mysqli_query($con, "DELETE FROM playlistSongs WHERE playlistId='$playlistId' AND songId='$songId'");
 }
 else {
-	echo "PlaylistId or songId was not passed into removeFromPlaylist.php";
+	echo "PlaylistId или songId не были переданы removeFromPlaylist.php";
 }
 
 

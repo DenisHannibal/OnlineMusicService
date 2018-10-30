@@ -14,7 +14,7 @@ if(isset($_POST['playlistId']) && isset($_POST['songId'])) {
 
 }
 else {
-	echo "PlaylistId or songId was not passed into addToPlaylist.php";
+	echo "PlaylistId или songId не были переданы addToPlaylist.php";
 }
 
 
