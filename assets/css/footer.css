@@ -63,6 +63,7 @@
 }
 
 .progressTime {
+    padding: 0 3px 0 3px; 
 	color: #a0a0a0;
     font-size: 11px;
     text-align: center;
