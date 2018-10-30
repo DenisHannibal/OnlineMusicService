@@ -20,10 +20,11 @@ else {
 
 <html>
 <head>
-	<title>Welcome to Slotify!</title>
+	<title>OnlineMusicService</title> 
 
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
+	<link rel="stylesheet" type="text/css" href="assets/css/footer.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/header.css"> 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="assets/js/script.js"></script>
 </head>
