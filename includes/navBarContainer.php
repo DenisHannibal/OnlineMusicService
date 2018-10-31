@@ -39,6 +39,13 @@
   $('.menu-trigger').click(function() {
     $('.group').slideToggle(720);
   });
+		
+		$(document).ready(function(){
+        var block = $('.group');    
+        $('.group').click(function() {
+            block.hide();  
+        }); 
+    });
    
   $(window).resize(function() {		
 		if (  $(window).width() > 720 ) {			
