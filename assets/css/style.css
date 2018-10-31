@@ -1,15 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Tenor+Sans|PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic);
 html, body {
 	padding: 0;
 	margin: 0;
-	height: 100%;
+    height: 100%;
+    
 }
- 
+@font-face {
+    font-family: 'Audiowide';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Audiowide'), local('Audiowide-Regular'), url(http://themes.googleusercontent.com/static/fonts/audiowide/v2/8XtYtNKEyyZh481XVWfVOj8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+  }
 *:focus {
     outline: none;
 }
 
 * {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Audiowide","Tenor Sans", sans-serif;    
 	color: #fff;
     letter-spacing: 1px;
 }
@@ -49,8 +56,10 @@ body {
 }
 .gridViewContainer {
     display: flex;
+    justify-content: center; 
     flex-direction: row;
     flex-wrap: wrap;  
+    margin-bottom: 20px; 
 }
 .gridViewItem {
     
@@ -64,7 +73,7 @@ body {
 }
 
 .gridViewInfo {
-    font-weight: 300;
+    font-weight: bold;  
     text-align: center;
     padding: 5px 0;
     text-overflow: ellipsis;
@@ -102,7 +111,7 @@ body {
 
 .entityInfo .rightSection p {
     color: #939393;
-    font-weight: 200;
+    font-weight: bold; 
 }
 
 .tracklist {
@@ -191,7 +200,7 @@ body {
     width: 100%;  
 }
 
-.button {
+.button, .button.green {
     color: #fff;
     cursor: pointer;
     margin-bottom: 10px;
@@ -202,12 +211,13 @@ body {
     border-radius: 500px;
     padding: 15px;
     min-width: 130px;
+    font-weight: bold; 
+}
+.button:hover,.button.green:hover { 
+    color: #000;
+    background-color: #fff;
 }
 
-.button.green {
-    background-color: #2ebd59;
-    border-color: #2ebd59;
-}
 
 .borderBottom {
     border-bottom: 1px solid #939393;
@@ -252,6 +262,10 @@ input:focus {
 
 .searchResultRow {
     padding: 15px 10px;
+    background-color: #4e4e4e;
+    margin: 10px 0 10px 0;
+    list-style: none;
+    opacity: .80;
 }
 
 .searchResultRow:hover {
@@ -347,6 +361,7 @@ input:focus {
     font-size: 18px;
     font-weight: 300;
     padding: 0 20px;
+    opacity: .80; 
 }
 
 .userDetails .container .message {

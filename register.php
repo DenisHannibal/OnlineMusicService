@@ -20,6 +20,7 @@
 	<title>OnlineMusicService</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/register.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/modal.css">    
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 	<script src="assets/js/register.js"></script>
 </head>
@@ -44,8 +45,6 @@
 	}
 
 	?>
-	
-	<canvas id="pixie"></canvas> 
 	<div id="background">
 
 		<div id="loginContainer">
@@ -55,7 +54,7 @@
 					<h2>Вход в аккаунт</h2>
 					<p>
 						<label for="loginUsername">Логин пользователя</label>
-						<input id="loginUsername" name="loginUsername" type="text" placeholder="DenisHannibal" value="<?php getInputValue('loginUsername') ?>" required autocomplete="off">
+						<input id="loginUsername" name="loginUsername" type="text"  value="<?php getInputValue('loginUsername') ?>" required autocomplete="off">
 					</p>
 					<p>
 						<label for="loginPassword">Пароль</label>
@@ -131,7 +130,7 @@
 
 			</div> 
 
-			<div id="loginText">
+			<div id="loginText"> 
 				<h1>Получите отличную музыку прямо сейчас!</h1>
 				<h2>Слушайте множество бесплатных песен:</h2> 
 				<ul>

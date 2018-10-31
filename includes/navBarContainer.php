@@ -1,11 +1,16 @@
 <div id="navBarContainer">
+	
+     
+
 	<nav class="navBar">
-		
-		
-		<div class="group">
-		<span role="link" tabindex="0" onclick="openPage('index.php')" class="logo">
+	<span role="link" tabindex="0" onclick="openPage('index.php')" class="logo">
 			<img src="assets/images/icons/logo.png">
-		</span> 
+		</span>  
+		<div 	class="menu-trigger">
+		<img src="assets/images/menu/icon-menu.svg" class="icon2" alt="Menu">   
+					</div> 
+		<div class="group "> 
+		
 			<div class="navItem">
 				<span role="link" tabindex="0" onclick="openPage('browse.php')" class="navItemLink">Главная</span>
 			</div>
@@ -17,9 +22,8 @@
 			<div class="navItem">
 				<span role="link" tabindex="0" onclick="openPage('settings.php')" class="navItemLink"><?php echo $userLoggedIn->getFirstAndLastName(); ?></span>
 			</div>
-		</div>
-			<div class="group">
-<div class="navItem">
+
+			<div class="navItem">
 	<span role='link' tabindex='0' onclick='openPage("search.php")' class="navItemLink">
 	Поиск 
 	</span>  
@@ -28,7 +32,21 @@
 	</span> 
 </div> 
 
-</div>
+		</div>
+		
+		<script> 
+	$(document).ready(function() {
+  $('.menu-trigger').click(function() {
+    $('.group').slideToggle(720);
+  });
+   
+  $(window).resize(function() {		
+		if (  $(window).width() > 720 ) {			
+			$('.group').removeAttr('style');
+		 }
+	});
+}); 
+	</script> 
 
 	</nav>
 </div>

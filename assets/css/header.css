@@ -6,22 +6,22 @@
     top: 0;
     left: 0; 
     z-index: 1; 
-    opacity: .80 ;  
 }
 
 .navBar {
  padding: 20px; 
     display: flex; 
-    justify-content: space-between;   
+    justify-content: space-between; 
+      
 }
 
 .logo img {
-    width: 50px; 
+    width: 60px;   
 }
 
 .navBar .group {
     display: flex; 
-    justify-content: space-between;  
+    justify-content: left;    
     align-items: center;
 }
 
@@ -39,12 +39,20 @@
     padding: 0 10px 0 10px; 
     text-decoration: none;
 }
- 
+.menu-trigger {
+    display:none; 
+    position: fixed;  
+    right: 0; 
+    top: 0; 
+  }  
 .navItemLink:hover {
     color: #ffffff;
 }
- 
+.icon2 {
+    width: 30px;
+    padding:  40px 25px 0 0;   
+} 
 .icon {
     width: 25px;
     padding:  0 10px 0 30px;   
-}
+} 

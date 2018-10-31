@@ -12,7 +12,7 @@ class Constants {
 	public static $usernameCharacters = "Ваш логин должно быть от 5 до 25 символов.";
 	public static $usernameTaken = "Такой логин уже существует";
 
-	public static $loginFailed = "Ваш логин или пароль не правильные"; 
+	public static $loginFailed = "Ваш логин или пароль не подходит";  
 
 }
 ?> 

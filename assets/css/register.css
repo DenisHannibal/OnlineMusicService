@@ -1,12 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Tenor+Sans|PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic);
+
 body {
     background: url(../images/fon_page/city.png) no-repeat center center fixed;
     background-size: 100%; 
     background-size: cover; 
+    font-family: "Audiowide","Tenor Sans", sans-serif;  
   } 
   body:after {   
     content: '';
     position: fixed;
-    top: 0px;
+    top: 0px; 
     left: 0px;
     right: 0px;
     bottom: 0px;
@@ -16,44 +19,30 @@ body {
 *:focus {
     outline: none;
 }
+@font-face {
+    font-family: 'Audiowide';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Audiowide'), local('Audiowide-Regular'), url(http://themes.googleusercontent.com/static/fonts/audiowide/v2/8XtYtNKEyyZh481XVWfVOj8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+  }
 #loginContainer * {
 	color: #fff;
-	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-	font-weight: normal;
+	font-weight: bold; 
 	line-height: 1em;
 	box-sizing: border-box;
 }
 
 #loginContainer {
 	width: 80%;
-	margin: 0 auto;
+	margin: 10vh auto; 
 	position: relative;
-    max-width: 1024px;
     z-index: 1;  
-}
-
-::-webkit-input-placeholder { 
-    color:    #fff;
-}
-:-moz-placeholder {
-   color:    #fff;
-   opacity:  1;
-}
-::-moz-placeholder { 
-   color:    #fff;
-   opacity:  1;
-}
-:-ms-input-placeholder {
-   color:    #fff;
-}
-::-ms-input-placeholder {
-   color:    #fff;
+    display: flex; 
+    justify-content: center; 
 }
 
 #inputContainer {
-    width: 400px;
     padding: 45px;
-    float: left;
     border-right: 1px solid #999;
 }
 
@@ -98,7 +87,10 @@ body {
 }
 
 #inputContainer button:hover {
-	cursor: pointer;
+    cursor: pointer;
+    color: #000;
+    background-color: #fff;
+     
 }
 
 .hasAccountText span {
@@ -137,7 +129,7 @@ body {
 
 #loginText ul {
     padding: 0;
-}
+} 
 
 #loginText li {
     font-size: 30px; 

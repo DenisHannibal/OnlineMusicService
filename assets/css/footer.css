@@ -8,7 +8,8 @@
 }
 
 #nowPlayingBar {
-	display: flex;
+    display: flex;
+    justify-content: space-between; 
     height: 90px;
     padding: 16px;
     box-sizing: border-box;
@@ -17,7 +18,7 @@
 #nowPlayingLeft,
 #nowPlayingRight {
 	width: 30%;
-}
+} 
 
 #nowPlayingRight {
 	position: relative;

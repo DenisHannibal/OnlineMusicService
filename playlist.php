@@ -22,7 +22,7 @@ $owner = new User($con, $playlist->getOwner());
 	<div class="rightSection">
 		<h2><?php echo $playlist->getName(); ?></h2>
 		<p><?php echo $playlist->getOwner(); ?></p>
-		<p><?php echo $playlist->getNumberOfSongs(); ?> песни</p>
+		<p>Песен: <?php echo $playlist->getNumberOfSongs(); ?></p> 
 		<button class="button" onclick="deletePlaylist('<?php echo $playlistId; ?>')">УДАЛИТЬ</button> 
 
 	</div>
