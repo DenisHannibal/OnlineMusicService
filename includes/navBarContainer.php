@@ -39,26 +39,33 @@
   $('.menu-trigger').click(function() {
     $('.group').slideToggle(720);
   });
-		$(document).mouseup(function (e){
+		
+   
+  $(window).resize(function() {		
+		if (  $(window).width() > 720 ) {			
+			$('.group').removeAttr('style');
+			$('.group').show(); 
+		 }
+	});
+	$(window).resize(function() {		
+		if (  $(window).width() < 720 ) {			
+			$(document).mouseup(function (e){ 
         var block = $(".group"); 
         if (!block.is(e.target)  
             && block.has(e.target).length === 0) { 
             block.hide(); 
         }
-    });
+    }); 
 		$(document).ready(function(){
         var block = $('.group');    
         $('.group').click(function() {
             block.hide();  
         }); 
-    });
-   
-  $(window).resize(function() {		
-		if (  $(window).width() > 720 ) {			
-			$('.group').removeAttr('style');
+    }); 
 		 }
 	});
 }); 
+
 	</script> 
 
 	</nav>
