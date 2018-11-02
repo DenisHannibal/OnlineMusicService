@@ -7,8 +7,8 @@ include("includes/includedFiles.php");
 <div class="gridViewContainer">
 
 	<?php
-		$albumQuery = mysqli_query($con, "SELECT * FROM albums ORDER BY RAND() LIMIT 10");
-
+		$albumQuery = mysqli_query($con, "SELECT * FROM albums ORDER BY RAND() LIMIT 12");
+ 
 		while($row = mysqli_fetch_array($albumQuery)) {
 			
 
