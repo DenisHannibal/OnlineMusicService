@@ -21,7 +21,7 @@ else {
 <html>
 <head>
 	<title>OnlineMusicService</title> 
-
+	<link rel="shortcut icon" href="assets/images/icons/logo.png" type="image/png">
 	<link rel="stylesheet" type="text/css" href="assets/css/normalize.css"> 
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/footer.css">
@@ -29,9 +29,9 @@ else {
 	<link rel="stylesheet" type="text/css" href="assets/css/modal.css">   
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="assets/js/script.js"></script>
-</head>
+</head> 
 
-<body>
+<body> 
 
 	<div id="mainContainer">
 

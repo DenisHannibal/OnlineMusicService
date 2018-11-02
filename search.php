@@ -44,7 +44,7 @@ $(function() {
 	<ul class="tracklist">
 		
 		<?php
-		$songsQuery = mysqli_query($con, "SELECT id FROM songs WHERE title LIKE '$term%' LIMIT 10");
+		$songsQuery = mysqli_query($con, "SELECT id FROM songs WHERE title LIKE '%$term%' LIMIT 10");
 
 		if(mysqli_num_rows($songsQuery) == 0) {
 			echo "<span class='noResults'>Не найдено ни одной песни " . $term . "</span>";
@@ -109,7 +109,7 @@ $(function() {
 	<h2>ИСПОЛНИТЕЛИ</h2>
 
 	<?php
-	$artistsQuery = mysqli_query($con, "SELECT id FROM artists WHERE name LIKE '$term%' LIMIT 10");
+	$artistsQuery = mysqli_query($con, "SELECT id FROM artists WHERE name LIKE '%$term%' LIMIT 10");
 	
 	if(mysqli_num_rows($artistsQuery) == 0) {
 		echo "<span class='noResults'>Не найдено ни одного исполнителя " . $term . "</span>";
@@ -142,7 +142,7 @@ $(function() {
 <div class="gridViewContainer"> 
 	<h2>АЛЬБОМЫ</h2>
 	<?php
-		$albumQuery = mysqli_query($con, "SELECT * FROM albums WHERE title LIKE '$term%' LIMIT 10");
+		$albumQuery = mysqli_query($con, "SELECT * FROM albums WHERE title LIKE '%$term%' LIMIT 10");
 
 		if(mysqli_num_rows($albumQuery) == 0) {
 			echo "<span class='noResults'>Не найдено ни одного альбома " . $term . "</span>";
@@ -160,7 +160,7 @@ $(function() {
 					</span>
 
 				</div>";
-
+ 
 
 
 		}

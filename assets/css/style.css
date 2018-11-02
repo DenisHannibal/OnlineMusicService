@@ -43,12 +43,11 @@ body {
     z-index: 1;  
 }
 #mainViewContainer {
-    padding-top: 120px; 
-    padding-bottom: 90px;
+    padding-top: 25px; 
 }
 
 #mainContent {
-    padding: 0 20px;
+    padding: 0 20px; 
 }
 
 .pageHeadingBig {
@@ -134,7 +133,7 @@ body {
 
 .tracklistRow:hover {
     background-color: #282828;
-    opacity: .99 ; 
+    opacity: .80 ;  
 }
 
 .tracklistRow .trackCount {
@@ -239,6 +238,7 @@ body {
 .searchContainer {
     background-color: #242424;
     padding: 20px 28px;
+    opacity: .80 ;    
 }
 
 .searchContainer h4 {
@@ -302,11 +302,11 @@ input:focus {
 .optionsMenu {
     position: fixed;
     background-color: #282828;
-    width: 200px;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 3px;
     z-index: 1000;
     display: none;
+    opacity: .80 ;    
 }
 
 .optionsMenu .item {
@@ -318,7 +318,7 @@ input:focus {
     cursor: pointer;
     height: 40px;
     background-color: #282828;
-    font-size: 14px;
+    font-size: 14px;  
 }
 
 .optionsMenu .item:hover {
