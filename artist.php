@@ -40,8 +40,8 @@ $artist = new Artist($con, $artistId);
 		$i = 1;
 		foreach($songIdArray as $songId) {
 
-			if($i > 5) {
-				break;
+			if($i > 100) {
+				break; 
 			}
 
 			$albumSong = new Song($con, $songId);
